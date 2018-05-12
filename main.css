@@ -15,6 +15,9 @@ body{
   background-size: 100% 100%;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 
 }
 h1{
@@ -29,10 +32,6 @@ h1{
   border-top-right-radius: 39px;
   font-size: 40px;
   font-family: sans-serif;
-  
-}
-.row{
-  text-align: center;
   
 }
 .card{
@@ -87,6 +86,7 @@ h3{
   line-height: 30px;
   margin-top: -4px;
   overflow: hidden;
+  text-align: center;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px; 
   
