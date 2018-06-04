@@ -1,0 +1,93 @@
+// mixins
+=border-radius($top-left, $top-right, $bottom-left, $bottom-right)
+    border-top-left-radius: $top-left 
+    border-top-right-radius: $top-right
+    border-bottom-left-radius: $bottom-left 
+    border-bottom-right-radius: $bottom-right
+    
+// placeholder classes    
+%card-size
+    height: 250px
+    width: 200px
+
+%card-attributes
+    border-radius: 15px
+    position: absolute
+    backface-visibility: hidden
+    transition: transform .5s linear 0s
+
+%h-tag-formatting
+    text-align: center
+    background-color: black
+    color: white  
+
+// tags  
+body
+    background-color: #BDFFF8
+
+h1
+    @extend %h-tag-formatting
+    +border-radius(39px, 39px, 40px, 40px)
+    width: 100%
+    height: 80px
+    margin-top: 0px
+    line-height: 80px
+    font-size: 40px
+    font-family: sans-serif
+
+h3
+    @extend %h-tag-formatting
+    +border-radius(0px, 0px, 15px, 15px)
+    width: 200px
+    height: 30px
+    line-height: 30px
+    margin-top: -4px
+    overflow: hidden
+
+// classes
+
+.card
+    @extend %card-size
+    display: inline-block
+    border-radius: 15px
+    margin: 5px 20px
+  
+
+.front
+    @extend %card-size
+    @extend %card-attributes
+    transform: perspective( 600px ) rotateY( 0deg )
+
+    img
+        @extend %card-size
+        border-radius: 15px
+  
+
+.back
+    @extend %card-size
+    @extend %card-attributes
+    transform: perspective( 600px ) rotateY( 180deg )
+
+    img
+        +border-radius(15px, 15px, 0px, 0px) 
+        height: 230px   
+
+  
+
+// ids
+#container
+    width: 75%
+    margin: 0px auto 0px auto
+    border: black solid 1px
+    background-color: white
+    border-radius: 40px
+
+
+#gameBoard
+    +border-radius(0px, 0px, 40px, 40px)
+    background-image: url("http://pre09.deviantart.net/0162/th/pre/i/2011/346/c/8/penguin_silhouette_by_shaunqb-d4iyirl.png")
+    background-size: 100% 100%
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+

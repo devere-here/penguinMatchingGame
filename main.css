@@ -1,93 +1,92 @@
-body{
-  background-color: #BDFFF8;
-  
+.back, .front img, .front, .card {
+  height: 250px;
+  width: 200px;
 }
-#container{
-  width: 75%;
-  margin: 0px auto 0px auto;
-  border: black solid 1px;
-    background-color: white;
-   border-radius: 40px;
 
+.back, .front {
+  border-radius: 15px;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.5s linear 0s;
 }
-#gameBoard{
-  background-image: url("http://pre09.deviantart.net/0162/th/pre/i/2011/346/c/8/penguin_silhouette_by_shaunqb-d4iyirl.png");
-  background-size: 100% 100%;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
 
-}
-h1{
+h3, h1 {
   text-align: center;
   background-color: black;
   color: white;
+}
+
+body {
+  background-color: #BDFFF8;
+}
+
+h1 {
+  border-top-left-radius: 39px;
+  border-top-right-radius: 39px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
   width: 100%;
   height: 80px;
   margin-top: 0px;
   line-height: 80px;
-  border-top-left-radius: 39px;
-  border-top-right-radius: 39px;
   font-size: 40px;
   font-family: sans-serif;
-  
 }
-.card{
-  height: 250px;
-  width: 200px;
-  display: inline-block;
-  border-radius: 15px;
-  margin: 5px 20px;
-  
-}
-.front{
-  height: 250px;
-  width: 200px;
-  background-color: blue;
-  border-radius: 15px;
-  position: absolute;
-  transform: perspective( 600px ) rotateY( 0deg );
-  backface-visibility: hidden;
-  transition: transform .5s linear 0s;
-  
-}
-.back{
-  height: 250px;
-  width: 200px;
-  background-color: green;
-  border-radius: 15px;
-  position: absolute;
-  transform: perspective( 600px ) rotateY( 180deg );
-  backface-visibility: hidden;
-  transition: transform .5s linear 0s;
-  
-}
-.front > img{
-  width: 200px; 
-  height: 250px;
-  border-radius: 15px;
 
-}
-.back > img{
-  height: 230px;
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px; 
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px; 
-  
-}
-h3{
-  background-color: black;
-  color: white;
+h3 {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   width: 200px;
   height: 30px;
   line-height: 30px;
   margin-top: -4px;
   overflow: hidden;
-  text-align: center;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px; 
-  
 }
+
+.card {
+  display: inline-block;
+  border-radius: 15px;
+  margin: 5px 20px;
+}
+
+.front {
+  transform: perspective(600px) rotateY(0deg);
+}
+.front img {
+  border-radius: 15px;
+}
+
+.back {
+  transform: perspective(600px) rotateY(180deg);
+}
+.back img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  height: 230px;
+}
+
+#container {
+  width: 75%;
+  margin: 0px auto 0px auto;
+  border: black solid 1px;
+  background-color: white;
+  border-radius: 40px;
+}
+
+#gameBoard {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  background-image: url("http://pre09.deviantart.net/0162/th/pre/i/2011/346/c/8/penguin_silhouette_by_shaunqb-d4iyirl.png");
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/*# sourceMappingURL=main.css.map */
